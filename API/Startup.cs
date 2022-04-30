@@ -30,6 +30,7 @@ namespace API {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices (IServiceCollection services) {
 
+            //services.AddLogging ();
             services.AddApplicationServices (_config);
             services.AddControllers ();
             services.AddCors ();
@@ -37,7 +38,7 @@ namespace API {
             services.AddSwaggerGen (c => {
                 c.SwaggerDoc ("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
-          //  services.AddMvc().ConfigureApiBehaviorOptions(options => options.SuppressMapClientErrors = false);
+            //  services.AddMvc().ConfigureApiBehaviorOptions(options => options.SuppressMapClientErrors = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
